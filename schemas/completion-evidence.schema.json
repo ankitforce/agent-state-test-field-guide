@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Completion Evidence",
+  "type": "object",
+  "required": [
+    "workflow_id",
+    "task_objective",
+    "starting_state_ref",
+    "expected_terminal_state",
+    "actual_terminal_state",
+    "required_side_effects",
+    "forbidden_side_effects_checked",
+    "evidence_links",
+    "result"
+  ],
+  "properties": {
+    "workflow_id": { "type": "string", "minLength": 1 },
+    "task_objective": { "type": "string", "minLength": 1 },
+    "starting_state_ref": { "type": "string", "minLength": 1 },
+    "expected_terminal_state": { "type": "object" },
+    "actual_terminal_state": { "type": "object" },
+    "required_side_effects": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "forbidden_side_effects_checked": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence_links": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "approval_ref": { "type": ["string", "null"] },
+    "retry_count": { "type": "integer", "minimum": 0 },
+    "result": { "enum": ["pass", "fail", "blocked"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

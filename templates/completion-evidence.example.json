@@ -1,0 +1,31 @@
+{
+  "workflow_id": "support-refund-hold-check",
+  "task_objective": "Review a delayed delivery case and leave the ticket in the correct pending state.",
+  "starting_state_ref": "fixture/support_case_1042/start",
+  "expected_terminal_state": {
+    "ticket.status": "hold",
+    "ticket.customer_reply_sent": true,
+    "refund.created": false
+  },
+  "actual_terminal_state": {
+    "ticket.status": "hold",
+    "ticket.customer_reply_sent": true,
+    "refund.created": false
+  },
+  "required_side_effects": [
+    "customer reply created",
+    "ticket timeline updated"
+  ],
+  "forbidden_side_effects_checked": [
+    "no refund issued",
+    "no duplicate ticket created"
+  ],
+  "evidence_links": [
+    "ticket://support/1042",
+    "trace://agent-run/2026-10-09-001"
+  ],
+  "approval_ref": null,
+  "retry_count": 0,
+  "result": "pass",
+  "notes": "Terminal state matched expected fixture."
+}

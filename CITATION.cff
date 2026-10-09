@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: Agent State Test Field Guide
+message: "If you use this companion package, cite the Substack article and this repository."
+authors:
+  - family-names: Kumar
+    given-names: Ankit
+date-released: "2026-10-09"
+license: MIT

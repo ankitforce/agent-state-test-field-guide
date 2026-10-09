@@ -1,0 +1,19 @@
+{
+  "name": "Agent State Test Field Guide",
+  "version": "1.0.0",
+  "canonical_article_url": "https://ankitkumar3514.substack.com/p/agent-state-test",
+  "public_repo_url": "https://github.com/ankitforce/agent-state-test-field-guide",
+  "read_order": [
+    "docs/state-test-pattern.md",
+    "checklists/agent-state-test-checklist.md",
+    "schemas/completion-evidence.schema.json",
+    "templates/completion-evidence.example.json",
+    "agent/tasks.md"
+  ],
+  "allowed_outputs": [
+    "state_test_plan",
+    "workflow_review",
+    "completion_evidence_json",
+    "side_effect_gap_report"
+  ]
+}
